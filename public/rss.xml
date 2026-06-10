@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>OBJEKT Studio Journal</title>
+  <link>https://objekt.studio</link>
+  <description>Occasional writing on type, identity, and the slow web.</description>
+  <language>en-us</language>
+    <item>
+      <title>On printing in May</title>
+      <link>https://objekt.studio/journal/on-printing-in-may</link>
+      <guid>https://objekt.studio/journal/on-printing-in-may</guid>
+      <pubDate>Thu, 30 Apr 2026 18:30:00 GMT</pubDate>
+    </item>
+</channel>
+</rss>
