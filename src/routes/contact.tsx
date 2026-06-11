@@ -59,7 +59,7 @@ function ContactPage() {
             Accept: "application/json",
           },
           body: JSON.stringify({
-            access_key: import.meta.env.VITE_WEB3FORMS_KEY || "YOUR_ACCESS_KEY_HERE",
+            access_key: import.meta.env.VITE_WEB3FORMS_KEY || "6c0efd2c-5a31-4d11-9c93-807cb5ecbd8f",
             name,
             email,
             brief,
