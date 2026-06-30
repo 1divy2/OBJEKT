@@ -11,7 +11,7 @@ export const projects: Project[] = [
   {
     index: "01",
     title: "A second skin for silk",
-    client: "Maison Aurélie",
+    client: "Zoro",
     year: "2026",
     discipline: "Identity · Art direction",
     image: work01,
@@ -26,7 +26,7 @@ export const projects: Project[] = [
   {
     index: "02",
     title: "Concrete, but warm",
-    client: "Edifício Norte",
+    client: "Sanji",
     year: "2025",
     discipline: "Wayfinding",
     image: work02,
@@ -41,7 +41,7 @@ export const projects: Project[] = [
   {
     index: "03",
     title: "A folded manifesto",
-    client: "Index Press",
+    client: "Nami",
     year: "2025",
     discipline: "Editorial · Print",
     image: work03,
@@ -56,7 +56,7 @@ export const projects: Project[] = [
   {
     index: "04",
     title: "Heavy water",
-    client: "Nox Audio",
+    client: "Luffy",
     year: "2026",
     discipline: "Interface · Brand",
     image: work04,

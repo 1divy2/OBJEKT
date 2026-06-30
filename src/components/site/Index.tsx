@@ -1,10 +1,10 @@
 import { Marquee } from "./Marquee";
 
 const rows = [
-  { y: "2026", t: "Maison Aurélie — Identity", d: "Paris" },
-  { y: "2026", t: "Nox Audio — Product UI", d: "Berlin" },
-  { y: "2025", t: "Index Press — Quarterly", d: "Lisbon" },
-  { y: "2025", t: "Edifício Norte — Wayfinding", d: "Porto" },
+  { y: "2026", t: "Zoro — Identity", d: "Paris" },
+  { y: "2026", t: "Luffy — Product UI", d: "Berlin" },
+  { y: "2025", t: "Nami — Quarterly", d: "Lisbon" },
+  { y: "2025", t: "Sanji — Wayfinding", d: "Porto" },
   { y: "2025", t: "Câmara — Visual system", d: "Madrid" },
   { y: "2024", t: "Slow Coffee Co. — Packaging", d: "Oslo" },
 ];
