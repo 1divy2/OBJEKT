@@ -10,11 +10,11 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { motion } from 'motion/react';
 import { CommandMenu } from '@/components/site/CommandMenu';
+import { Cursor } from "@/components/site/Cursor";
 
 function NotFoundComponent() {
   return (
@@ -49,9 +49,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -172,6 +169,7 @@ function RootComponent() {
         }} 
       />
       <CommandMenu />
+      <Cursor />
       <Analytics />
       <SpeedInsights />
     </QueryClientProvider>

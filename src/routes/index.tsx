@@ -7,7 +7,6 @@ import { Services } from "@/components/site/Services";
 import { IndexLedger } from "@/components/site/Index";
 import { Press } from "@/components/site/Press";
 import { Splash } from "@/components/site/Splash";
-import { Cursor } from "@/components/site/Cursor";
 import { ScrollProgress } from "@/components/site/ScrollProgress";
 import { Footer } from "@/components/site/Footer";
 
@@ -27,7 +26,6 @@ function Index() {
   return (
     <div className="grain bg-background text-foreground">
       <Splash />
-      <Cursor />
       <ScrollProgress />
       <Nav />
       <main id="main-content">
