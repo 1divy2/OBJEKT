@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, animate } from "motion/react";
 import { useReducedMotion } from "../../hooks/use-reduced-motion";
 
 export function Splash() {
@@ -12,24 +12,25 @@ export function Splash() {
       setDone(true);
       return;
     }
-    const DURATION = 1400;
-    const start = Date.now();
-    const id = setInterval(() => {
-      const p = Math.min(1, (Date.now() - start) / DURATION);
-      setN(Math.floor(p * 100));
-      if (p >= 1) {
-        clearInterval(id);
+    
+    const controls = animate(0, 100, {
+      duration: 1.4,
+      ease: [0.22, 1, 0.36, 1],
+      onUpdate: (value) => setN(Math.floor(value)),
+      onComplete: () => {
         setTimeout(() => setDone(true), 350);
       }
-    }, 16);
+    });
+
     const fallback = setTimeout(() => {
       setDone(true);
-    }, DURATION + 1200);
+    }, 1400 + 1200);
+
     return () => {
-      clearInterval(id);
+      controls.stop();
       clearTimeout(fallback);
     };
-  }, []);
+  }, [reducedMotion]);
 
   return (
     <AnimatePresence>
