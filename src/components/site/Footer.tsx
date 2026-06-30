@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background">
+    <footer>
       <div className="grid grid-cols-2 gap-8 px-6 py-16 md:grid-cols-12 md:px-10">
         <div className="col-span-2 md:col-span-6">
           <p className="text-mono opacity-60">[ Currently ]</p>

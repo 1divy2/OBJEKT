@@ -9,6 +9,8 @@ import { Press } from "@/components/site/Press";
 import { Splash } from "@/components/site/Splash";
 import { ScrollProgress } from "@/components/site/ScrollProgress";
 import { Footer } from "@/components/site/Footer";
+import { useInView } from "motion/react";
+import { useRef, useEffect } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,8 +25,20 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const workRef = useRef<HTMLElement>(null);
+  const manifestoRef = useRef<HTMLElement>(null);
+  const servicesRef = useRef<HTMLElement>(null);
+  const pressRef = useRef<HTMLElement>(null);
+
+  const workInView = useInView(workRef, { margin: "-20% 0px -20% 0px" });
+  const manifestoInView = useInView(manifestoRef, { margin: "-20% 0px -20% 0px" });
+  const servicesInView = useInView(servicesRef, { margin: "-20% 0px -20% 0px" });
+  const pressInView = useInView(pressRef, { margin: "-20% 0px -20% 0px" });
+
+  const isLight = workInView || manifestoInView || servicesInView || pressInView;
+
   return (
-    <div className="grain bg-background text-foreground">
+    <div className={`grain transition-colors duration-1000 ${isLight ? "bg-background text-foreground" : "bg-foreground text-background"}`}>
       <Splash />
       <ScrollProgress />
       <Nav />
@@ -32,16 +46,16 @@ function Index() {
         <section aria-label="Hero">
           <Hero />
         </section>
-        <section id="work" aria-label="Selected Work">
+        <section ref={workRef} id="work" aria-label="Selected Work">
           <WorkGrid />
         </section>
-        <section aria-label="Manifesto">
+        <section ref={manifestoRef} aria-label="Manifesto">
           <Manifesto />
         </section>
-        <section aria-label="Services">
+        <section ref={servicesRef} aria-label="Services">
           <Services />
         </section>
-        <section aria-label="Press">
+        <section ref={pressRef} aria-label="Press">
           <Press />
         </section>
         <section aria-label="Index">

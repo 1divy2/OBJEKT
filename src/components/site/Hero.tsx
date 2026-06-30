@@ -9,7 +9,7 @@ export function Hero() {
   const reducedMotion = useReducedMotion();
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-foreground text-background">
+    <section className="relative min-h-screen overflow-hidden">
       <div className="absolute inset-0 opacity-[0.07]" aria-hidden>
         <svg width="100%" height="100%">
           <defs>
@@ -28,33 +28,39 @@ export function Hero() {
         </div>
 
         <h1 className="text-display col-span-12 mt-12 text-[18vw] leading-[0.88] md:mt-20 md:text-[14vw]">
-          <motion.span
-            style={{ willChange: reducedMotion ? "auto" : "transform" }}
-            initial={reducedMotion ? { y: 0 } : { y: "110%" }}
-            animate={{ y: 0 }}
-            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-            className="block"
-          >
-            Designed
-          </motion.span>
-          <motion.span
-            style={{ willChange: reducedMotion ? "auto" : "transform" }}
-            initial={reducedMotion ? { y: 0 } : { y: "110%" }}
-            animate={{ y: 0 }}
-            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: reducedMotion ? 0 : 0.08 }}
-            className="block pl-[8vw] italic"
-          >
-            for the
-          </motion.span>
-          <motion.span
-            style={{ willChange: reducedMotion ? "auto" : "transform" }}
-            initial={reducedMotion ? { y: 0 } : { y: "110%" }}
-            animate={{ y: 0 }}
-            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: reducedMotion ? 0 : 0.16 }}
-            className="block text-accent"
-          >
-            slow web.
-          </motion.span>
+          <span className="block overflow-hidden">
+            <motion.span
+              style={{ willChange: reducedMotion ? "auto" : "transform" }}
+              initial={reducedMotion ? { y: 0 } : { y: "110%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+              className="block"
+            >
+              Designed
+            </motion.span>
+          </span>
+          <span className="block overflow-hidden">
+            <motion.span
+              style={{ willChange: reducedMotion ? "auto" : "transform" }}
+              initial={reducedMotion ? { y: 0 } : { y: "110%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: reducedMotion ? 0.2 : 0.28 }}
+              className="block pl-[8vw] italic"
+            >
+              for the
+            </motion.span>
+          </span>
+          <span className="block overflow-hidden pb-4">
+            <motion.span
+              style={{ willChange: reducedMotion ? "auto" : "transform" }}
+              initial={reducedMotion ? { y: 0 } : { y: "110%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: reducedMotion ? 0.2 : 0.36 }}
+              className="block text-accent"
+            >
+              slow web.
+            </motion.span>
+          </span>
         </h1>
 
         <div className="col-span-12 mt-auto grid grid-cols-12 gap-6 border-t border-background/20 pt-6 md:gap-8">

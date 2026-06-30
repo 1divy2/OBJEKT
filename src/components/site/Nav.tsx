@@ -75,7 +75,7 @@ export function Nav() {
                 key={l.to}
                 to={l.to}
                 onMouseEnter={playHover}
-                className="text-mono opacity-80 transition-opacity hover:opacity-100"
+                className="hover-underline text-mono opacity-80 transition-opacity hover:opacity-100"
                 activeProps={{ className: "text-mono opacity-100" }}
                 activeOptions={{ exact: l.to === "/" }}
               >

@@ -11,13 +11,13 @@ const rows = [
 
 export function IndexLedger() {
   return (
-    <section className="bg-foreground text-background">
+    <section>
       <Marquee
         items={[
-          "Available Q3 2026",
-          "Two briefs only",
-          "No retainers",
-          "Open source where possible",
+          "Sailing the Grand Line 2026",
+          "Recruiting new nakama",
+          "No bounties too high",
+          "Seeking the One Piece",
         ]}
       />
       <div className="px-6 py-24 md:px-10">
